@@ -1,19 +1,13 @@
 #include <stdio.h>
 
- int main(void) {
-	 int n;
-	 scanf("%d" , &n);
+int square(int n) {
+    return n * n;
+}
 
-  int sum = 0;
+int main(void) {
+	int n;
+	scanf("%d", &n);
+	printf("%d\n", square(n));
+	return 0;
 
-	 for(int i = 1; i <= n; i++){
-		 sum += i;
-	 }
-
-	 printf("%d\n", sum);
-
-	 return 0;
- }
-
- 
-
+}
