@@ -1,23 +1,19 @@
 #include <stdio.h>
 
-int main(void) {
-	int n;
-	scanf("%d", &n);
+ int main(void) {
+	 int n;
+	 scanf("%d" , &n);
 
-   if(n % 15 ==0){
-	   printf("FizzBuzz\n");
+  int sum = 0;
 
-	  }
+	 for(int i = 1; i <= n; i++){
+		 sum += i;
+	 }
 
-   else if(n % 3 ==0){
-	   printf("Fizz\n");
-}
-   else if(n % 5==0){
-	   printf("Buzz\n");
-   }
-else{ printf("%d\n" , n);}
+	 printf("%d\n", sum);
 
+	 return 0;
+ }
 
+ 
 
-	  return 0;
-  }
