@@ -1,25 +1,25 @@
 #include <stdio.h>
-
-typedef struct {
-	int x;
-	int y;
-}Point;
+#include <stdlib.h>
 
 int main(void) {
-	int x1 , y1 , x2 , y2;
-        scanf("%d %d %d %d" , &x1 , &y1 , &x2 , &y2);
+	int n;
+	scanf("%d", &n);
+	int *nums = malloc(n * sizeof(int));
+if (nums == NULL){
+	return 1;
+}
+long long sum = 0;
 
-	Point p = {x1 , y1};
-	Point q = {x2 , y2};
+	for(int i =0; i < n;i++) {
+		scanf("%d" , &nums[i]);
+          sum += nums[i];
 
-	int dx = q.x - p.x;
-	int dy = q.y - p.y;
+	}
 
-	int result = dx * dx + dy* dy ;
+printf("%lld\n" , sum);
 
-	printf("%d\n" , result);
+free(nums);
 
-	return 0 ;
-
+return 0;
 }
 
